@@ -1,0 +1,20 @@
+#include <stdio.h>
+// 3500원의 돈이 있다. 슈퍼에 들려서 크림빵(500원), 새우깡(700원), 콜라(400원)를 사려한다.
+// 잔돈을 하나도 남기지 않고 이 세가지 물건을 하나 이상 반드시 구매하려면 어떻게 구매를 진행해야 하겠는가?
+
+int main()
+{
+	int money = 3500;
+	int bread = 500, shrimp = 700, coke = 400;
+
+	for (int i = 1; i < 7; i++) {
+		for (int j = 1; j < 5; j++) {
+			for (int k = 1; k < 5; k++) {
+				if (bread * i + shrimp * j + coke * k == 3500) {
+					printf("크림빵: %d, 새우깡: %d, 콜라: %d\n", i, j, k);
+				}
+			}
+		}
+	}
+
+}
